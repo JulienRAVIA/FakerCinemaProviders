@@ -195,20 +195,22 @@ class Person extends BaseProvider
 
     /**
      * @param int|string<int>|null $count
+     * @param bool $duplicates
      * @return array<string>
      */
-    public static function femaleDirectors($count = self::DEFAULT_COUNT)
+    public static function femaleDirectors($count = self::DEFAULT_COUNT, $duplicates = false)
     {
-        return static::directors(self::FEMALE_GENDER, $count);
+        return static::directors(self::FEMALE_GENDER, $count, $duplicates);
     }
 
     /**
      * @param int|string<int>|null $count
+     * @param bool $duplicates
      * @return array<string>
      */
-    public static function maleDirectors($count = self::DEFAULT_COUNT)
+    public static function maleDirectors($count = self::DEFAULT_COUNT, $duplicates = false)
     {
-        return static::directors(self::MALE_GENDER, $count);
+        return static::directors(self::MALE_GENDER, $count, $duplicates);
     }
 
     /**
@@ -246,19 +248,21 @@ class Person extends BaseProvider
 
     /**
      * @param int|string<int>|null $count
+     * @param bool $duplicates
      * @return array
      */
-    public static function maleActors($count = self::DEFAULT_COUNT)
+    public static function maleActors($count = self::DEFAULT_COUNT, $duplicates = false)
     {
-        return static::actors(self::MALE_GENDER, $count);
+        return static::actors(self::MALE_GENDER, $count, $duplicates);
     }
 
     /**
      * @param int|string<int>|null $count
+     * @param bool $duplicates
      * @return array
      */
-    public static function femaleActors($count = self::DEFAULT_COUNT)
+    public static function femaleActors($count = self::DEFAULT_COUNT, $duplicates = false)
     {
-        return static::actors(self::FEMALE_GENDER, $count);
+        return static::actors(self::FEMALE_GENDER, $count, $duplicates);
     }
 }
