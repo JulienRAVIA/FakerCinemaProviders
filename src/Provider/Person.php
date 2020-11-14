@@ -265,4 +265,74 @@ class Person extends BaseProvider
     {
         return static::actors(self::FEMALE_GENDER, $count, $duplicates);
     }
+
+    /**
+     * @param string $gender
+     * @return string|null
+     */
+    public static function person($gender = null)
+    {
+        $personsM = array_merge(self::$actors, self::$directorsM);
+        $personsF = array_merge(self::$actresses, self::$directorsM);
+
+        $persons = static::sortByGender($gender, $personsM, $personsF);
+        $persons = array_merge($persons, self::$cinematographers, self::$composers);
+
+        return static::randomElement($persons);
+    }
+
+    /**
+     * @return string
+     */
+    public static function malePerson()
+    {
+        return static::person(self::MALE_GENDER);
+    }
+
+    /**
+     * @return string
+     */
+    public static function femalePerson()
+    {
+        return static::person(self::FEMALE_GENDER);
+    }
+
+    /**
+     * @param string $gender
+     * @param int $count
+     * @param bool $duplicates
+     * @return array
+     */
+    public static function persons($gender = null, $count = self::DEFAULT_COUNT, $duplicates = false)
+    {
+        $personsM = array_merge(self::$actors, self::$directorsM);
+        $personsF = array_merge(self::$actresses, self::$directorsM);
+
+        $persons = static::sortByGender($gender, $personsM, $personsF);
+        if ($gender === null) {
+            $persons = array_merge($persons, self::$cinematographers, self::$composers);
+        }
+
+        return static::generateMultiple($persons, $count, $duplicates);
+    }
+
+    /**
+     * @param int $count
+     * @param bool $duplicates
+     * @return array
+     */
+    public static function malePersons($count = self::DEFAULT_COUNT, $duplicates = false)
+    {
+        return static::persons(self::MALE_GENDER, $count, $duplicates);
+    }
+
+    /**
+     * @param int $count
+     * @param bool $duplicates
+     * @return array
+     */
+    public static function femalePersons($count = self::DEFAULT_COUNT, $duplicates = false)
+    {
+        return static::actors(self::MALE_GENDER, $count, $duplicates);
+    }
 }

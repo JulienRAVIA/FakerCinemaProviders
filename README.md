@@ -84,6 +84,9 @@ $faker->femaleDirector; // Agnès Varda
 $faker->maleDirector; // David Fincher
 $faker->composer; // Hans Zimmer
 $faker->cinematographer; // Roger Deakins
+$faker->person; // Cate Blanchett
+$faker->femalePerson; // Emma Stone
+$faker->malePerson; // Ridley Scott
 
 $faker->actors($gender = null, $count = 2, $duplicates = false); // array('Christian Bale', 'Amy Adams');
 $faker->actors($gender = 'male', $count = 2, $duplicates = false); // array('Christian Bale', 'Gary Oldman');
@@ -97,7 +100,11 @@ $faker->femaleDirectors($count = 2, $duplicates = false); // array('Agnès Varda
 $faker->maleDirectors($count = 2, $duplicates = false); // array('David Fincher', 'Denis Villeneuve');
 $faker->composers($count = 2, $duplicates = false); // array('Hans Zimmer', 'Ennio Morricone');
 $faker->cinematographers($count = 2, $duplicates = false); // array('Roger Deakins', 'Greig Fraser');
-
+$faker->persons($gender = null, $count = 2, $duplicates = false); // array('Bradley Cooper', 'Greta Gerwig');
+$faker->persons($gender = 'male', $count = 2, $duplicates = false); // array('Damien Chazelle', 'Gary Oldman');
+$faker->persons($gender = 'female', $count = 2, $duplicates = false); // array('Kathryn Bigelow', 'Amy Adams');
+$faker->femalePersons($count = 2, $duplicates = false); // array('Agnès Varda', 'Amy Adams')
+$faker->malePersons($count = 2, $duplicates = false); // array('Denis Villeneuve', 'Leonardo Dicaprio');
 ```
 
 ### `Xylis\FakerCinema\Provider\Character`
@@ -121,6 +128,16 @@ $faker->characters($gender = 'female', $count = 2, $duplicates = false); // arra
 $faker->femaleCharacters($count = 2, $duplicates = false); // array('O-Ren Ishii', 'Beatrix Kiddo');
 $faker->maleCharacters($count = 2, $duplicates = false); // array('Darth Vader', 'Luke Skywalker');
 ```
+
+## Changes
+
+#### v1.1.0
+
+- Add `persons, femalePersons, malePersons, person, malePerson, femalePerson`
+
+#### v1.0.1
+
+- Add forgotten parameter `$duplicates` to `femaleDirectors, maleDirectors, maleActors, femaleActors`
 
 ## Contributing
 

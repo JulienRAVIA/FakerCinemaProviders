@@ -18,6 +18,10 @@ class PersonProviderTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEmpty($faker->maleActor);
         $this->assertNotEmpty($faker->femaleActor);
 
+        $this->assertNotEmpty($faker->person);
+        $this->assertNotEmpty($faker->malePerson);
+        $this->assertNotEmpty($faker->femalePerson);
+
         $this->assertNotEmpty($faker->cinematographer);
         $this->assertNotEmpty($faker->composer);
     }
@@ -61,5 +65,17 @@ class PersonProviderTest extends \PHPUnit\Framework\TestCase
         $this->assertCount(1, $faker->composers(1));
         $this->assertCount(3, $faker->composers());
         $this->assertCount(5, $faker->composers(5));
+
+        $this->assertCount(1, $faker->persons(null, 1));
+        $this->assertCount(3, $faker->persons(null));
+        $this->assertCount(5, $faker->persons(null, 5));
+
+        $this->assertCount(1, $faker->femalePersons(1));
+        $this->assertCount(3, $faker->femalePersons());
+        $this->assertCount(5, $faker->femalePersons(5));
+
+        $this->assertCount(1, $faker->malePersons(1));
+        $this->assertCount(3, $faker->malePersons());
+        $this->assertCount(5, $faker->malePersons(5));
     }
 }
