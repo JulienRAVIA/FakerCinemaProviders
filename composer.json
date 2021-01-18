@@ -1,6 +1,6 @@
 {
   "name": "xylis/faker-cinema-providers",
-  "description": "Generate random movie & shows datas using fzaninotto/Faker (based on real names & datas)",
+  "description": "Generate random movie & shows datas using fakerphp/faker (based on real names & datas)",
   "minimum-stability": "stable",
   "license": "MIT",
   "type": "library",
@@ -12,7 +12,7 @@
   ],
   "require": {
     "php": "^5.3.3 || ^7.0",
-    "fzaninotto/faker": "~1"
+    "fakerphp/faker": "^1.12"
   },
   "autoload": {
     "psr-4": {
@@ -24,3 +24,4 @@
     "squizlabs/php_codesniffer": "^2.9.2"
   }
 }
+
