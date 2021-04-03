@@ -1,12 +1,12 @@
 <?php
 
-namespace Xylis\FakerCinema\Provider;
+namespace QuiGon\FakerCinema\Provider;
 
-use Xylis\FakerCinema\Provider\BaseProvider;
+use QuiGon\FakerCinema\Provider\BaseProvider;
 
 /**
  * @author Xylis <julien.ravia@gmail.com>
- * @package Xylis\FakerCinema
+ * @package QuiGon\FakerCinema
  */
 class TvShow extends BaseProvider
 {
