@@ -1,6 +1,6 @@
 {
-  "name": "xylis/faker-cinema-providers",
-  "description": "Generate random movie & shows datas using fzaninotto/Faker (based on real names & datas)",
+  "name": "djyp/faker-cinema-providers",
+  "description": "Generate random movie & shows datas using fakerphp/Faker (based on real names & datas)",
   "minimum-stability": "stable",
   "license": "MIT",
   "type": "library",
@@ -8,6 +8,10 @@
     {
       "name": "Julien RAVIA",
       "email": "julien.ravia@gmail.com"
+    },
+    {
+      "name": "Djyp Forest Fortin",
+      "email": "djyp@oclock.io"
     }
   ],
   "require": {
@@ -16,7 +20,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Xylis\\FakerCinema\\": "src/"
+      "QuiGon\\FakerCinema\\": "src/"
     }
   },
   "require-dev": {
