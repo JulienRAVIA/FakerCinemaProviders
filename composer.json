@@ -11,8 +11,8 @@
     }
   ],
   "require": {
-    "php": "^5.3.3 || ^7.0",
-    "fzaninotto/faker": "~1"
+    "php": "^5.3.3 || ^7.0 || ^8.0",
+    "fakerphp/faker": "~1"
   },
   "autoload": {
     "psr-4": {
