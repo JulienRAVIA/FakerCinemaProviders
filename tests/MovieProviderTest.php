@@ -16,6 +16,7 @@ class MovieProviderTest extends \PHPUnit\Framework\TestCase
         $this->assertNotEmpty($faker->studio);
         $this->assertNotEmpty($faker->saga);
         $this->assertNotEmpty($faker->overview);
+        $this->assertNotEmpty($faker->image);
     }
 
     /**
@@ -41,5 +42,9 @@ class MovieProviderTest extends \PHPUnit\Framework\TestCase
         $this->assertCount(1, $faker->sagas(1));
         $this->assertCount(3, $faker->sagas());
         $this->assertCount(5, $faker->sagas(5));
+
+        $this->assertCount(1, $faker->images(1));
+        $this->assertCount(3, $faker->images());
+        $this->assertCount(5, $faker->images(5));
     }
 }
